@@ -8,18 +8,8 @@
     </div>
 
     <div class="section">
-      <h2>Tutorial Token</h2>
-      <TutorialToken />
-    </div>
-
-    <div class="section">
-      <h2>Simple Storage</h2>
-      <SimpleStorage />
-    </div>
-
-    <div class="section">
-      <h2>Complex Storage</h2>
-      <ComplexStorage />
+      <h2>SmartInvoice</h2>
+      <SmartInvoice />
     </div>
   </div>
 
@@ -27,17 +17,13 @@
 </template>
 
 <script>
-import TutorialToken from './TutorialToken'
-import SimpleStorage from './SimpleStorage'
-import ComplexStorage from './ComplexStorage'
-import { mapGetters } from 'vuex'
+import SmartInvoice from './SmartInvoice'
+
 
 export default {
   name: 'app',
   components: {
-    ComplexStorage,
-    TutorialToken,
-    SimpleStorage
+    SmartInvoice
   },
 
   computed: mapGetters('drizzle', ['isDrizzleInitialized'])
