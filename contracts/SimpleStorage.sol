@@ -11,5 +11,3 @@ contract SimpleStorage {
         emit StorageSet("Data stored successfully!");
     }
 }
-
-
