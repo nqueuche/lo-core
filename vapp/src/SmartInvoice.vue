@@ -1,10 +1,37 @@
 <template>
   <div v-if="isDrizzleInitialized">
- <drizzle-contract-form
+      <drizzle-contract
         contractName="SmartInvoice"
-        method="set"
-        :placeholders="['Value']"
-      />     
+        method="amount"
+        label="Value"
+      />  
+       <drizzle-contract
+        contractName="SmartInvoice"
+        method="dueDate"
+        label="Value"
+      />  
+       <drizzle-contract
+        contractName="SmartInvoice"
+        method="assetToken"
+        label="Value"
+      />  
+       <drizzle-contract
+        contractName="SmartInvoice"
+        method="beneficiary"
+        label="Value"
+      />  
+       <drizzle-contract
+        contractName="SmartInvoice"
+        method="payer"
+        label="Value"
+      />  
+       <drizzle-contract
+        contractName="SmartInvoice"
+        method="referenceHash"
+        label="Value"
+      />  
+
+
   </div>
 
   <div v-else>Loading...</div>
@@ -31,14 +58,3 @@ export default {
 </script>
 
 <style></style>
-_amount:
-1
-_dueDate:
-1902020
-_assetToken:
-0x96d0004913d4672F705DA4546ae7094d67071c1F
-_beneficiary:
-0x58ca41f19ea0326b085178c275a1c7B1e57D9f1c
-_payer:
-0x96d0004913d4672F705DA4546ae7094d67071c1F
-_referenceHash:

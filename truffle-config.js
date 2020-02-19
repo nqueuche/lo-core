@@ -4,4 +4,6 @@ module.exports = {
   // to customize your Truffle configuration!
   contracts_build_directory: path.join(__dirname, "vapp/src/contracts"),
 
+  
+
 };
