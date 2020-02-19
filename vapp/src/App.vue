@@ -4,12 +4,15 @@
 
     <div class="section">
       <h2>Show the Accounts</h2>
+      <Account/>
       <drizzle-account units="Ether" :precision="2" />
     </div>
 
     <div class="section">
       <h2>SmartInvoice</h2>
       <SmartInvoice />
+            <SmartInvoiceForm />
+
     </div>
   </div>
 
@@ -18,13 +21,17 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Account from './Account'
 import SmartInvoice from './SmartInvoice'
+import SmartInvoiceForm from './SmartInvoiceForm'
 
 
 export default {
   name: 'app',
   components: {
-    SmartInvoice
+    Account,
+    SmartInvoice,
+    SmartInvoiceForm 
   },
 
   computed: mapGetters('drizzle', ['isDrizzleInitialized'])

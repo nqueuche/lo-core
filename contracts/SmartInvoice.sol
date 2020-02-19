@@ -28,6 +28,10 @@ contract SmartInvoice {
     address public payer;
     string public referenceHash;
 
+    function set(uint x) public {
+        amount = x;
+    }
+
     Status  public status;
 
     /**
