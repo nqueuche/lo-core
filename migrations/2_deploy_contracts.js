@@ -1,5 +1,5 @@
 const SmartInvoice = artifacts.require("SmartInvoice");
 
 module.exports = function(deployer) {
-  deployer.deploy(SmartInvoice, "2","1902020","0x96d0004913d4672F705DA4546ae7094d67071c1F","0x58ca41f19ea0326b085178c275a1c7B1e57D9f1c","0x96d0004913d4672F705DA4546ae7094d67071c1F","azert" );
+  deployer.deploy(SmartInvoice, "2","1902020","0x535f6be6964b6ec4d4b0f6e52e6a88be8632c39b","0x2b9368262fb4a6f06443d1ccc1385c82f2059e42","0xba2c955d139be01cffb76f2354ce718828006d94","azert" );
 };
