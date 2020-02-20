@@ -28,8 +28,13 @@ contract SmartInvoice {
     address public payer;
     string public referenceHash;
 
-    function set(uint x) public {
+    function set(uint x, uint y, IERC20 z, address a, address b, string memory c) public {
         amount = x;
+        dueDate = y;
+        assetToken = z;
+        beneficiary = a;
+        payer = b;
+        referenceHash = c;
     }
 
     Status  public status;
