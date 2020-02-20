@@ -6,12 +6,13 @@
       label="Value"
       :placeholder="['accounts']"
     /> -->
-    <drizzle-contract contractName="SmartInvoice" method="dueDate" label="Value" />
-    <drizzle-contract contractName="SmartInvoice" method="assetToken" label="Value" />
-    <drizzle-contract contractName="SmartInvoice" method="beneficiary" label="Value" />
-    <drizzle-contract contractName="SmartInvoice" method="payer" label="Value" />
-    <drizzle-contract contractName="SmartInvoice" method="referenceHash" label="Value" />
-    {{ contractData }}
+   <Amount/>
+   <DueDate/>
+   <AssetToken/>
+   <Beneficiary />
+   <Payer/>
+   <ReferenceHash />
+    
   <!-- </div> -->
 
   <!-- <div v-else>Loading...</div> --></div>
@@ -20,32 +21,24 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
-const args = {
-  contractName: "SmartInvoice",
-  method: ['amount','dueDate', 'assetToken', 'beneficiary', 'payer', 'referenceHash'],
-  methodArgs: ''
-}
+import Amount from './Amount'
+import DueDate from './DueDate'
+import AssetToken from './AssetToken'
+import Beneficiary from './Beneficiary'
+import Payer from './Payer'
+import ReferenceHash from './ReferenceHash'
 
 export default {
-  name: 'SmartInvoice',
-  computed: {
-    ...mapGetters('contracts', ['getContractData']),
-  
-  contractData() {
-    return this.getContractData({
-      contract: args.contractName,
-      method: args.method,
-    })
+  name: 'SmartInvoice',  
+  components: {
+    Amount,
+    DueDate,
+    AssetToken,
+    Beneficiary,
+    Payer,
+    ReferenceHash
 
-  },
-
-
-  },
-  created() {
-    this.$store.dispatch('drizzle/REGISTER_CONTRACT', args);
-  }
-  
+    }
 }
 </script>
 
