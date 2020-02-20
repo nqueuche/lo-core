@@ -1,9 +1,30 @@
 <template>
     <form> 
         <input
-        v-model="value"
+        v-model="amount"
         type="text"
-        placeHolder="Value" />
+        placeHolder="Amount" />
+          <input
+        v-model="dueDate"
+        type="text"
+        placeHolder="Due Date" />
+           <input
+        v-model="assetToken"
+        type="text"
+        placeHolder="Asset Token" />
+           <input
+        v-model="beneficiary"
+        type="text"
+        placeHolder="Beneficiary" />
+           <input
+        v-model="payer"
+        type="text"
+        placeHolder="Payer" />
+           <input
+        v-model="referenceHash"
+        type="text"
+        placeHolder="Reference Hash" />
+
         <button @click.prevent="onSubmit">Submit</button>
     </form>
 </template>
@@ -20,11 +41,22 @@ export default {
             this.drizzleInstance
             .contracts['SmartInvoice']
             .methods['set']
-            .cacheSend(this.value)
+            .cacheSend(
+                this.amount, 
+                this.dueDate, 
+                this.assetToken,
+                this.beneficiary,
+                this.payer,
+                this.referenceHash)
         }
     },
     data: () => ({
-        value:''
+        amount:'',
+        dueDate: '',
+        assetToken: '',
+        beneficiary: '',
+        payer: '',
+        referenceHash: ''
 
     })
 
