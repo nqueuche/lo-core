@@ -16,7 +16,6 @@ const args = {
   methodArgs: ''
 }
 
-console.log(args);
 export default {
   name: 'AssetToken',
   computed: {
