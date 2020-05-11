@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>{{ activeAccount }}</div>
+        <div>Active account: {{ activeAccount }}</div>
         <div>Balance: {{ activeBalance }} Wei</div>
     </div>
 </template>
